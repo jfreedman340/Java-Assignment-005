@@ -39,12 +39,83 @@ public class TempConversion {
         System.out.printf("%-4s : %40s%n", "Q).", "To quit");
         return input.nextLine();
     }
-
+    public static String getConvertToUnit() {
+        Scanner unitScanner = new Scanner(System.in);
+        System.out.print("Enter the temperature unit to convert to: ");
+        String convertTo = unitScanner.nextLine();
+        return convertTo;
+    }
     public static void main(String[] args) {
+        Scanner unitScanner;
+        String convertTo;
+        double temperature;
+
         TempConversion tempConversion = new TempConversion();
-        while(true) {
+        String unitChoice = "";
+        boolean shouldRun = true;
+
+        while(shouldRun) {
+            System.out.println();
+            System.out.println("Please enter your choice of letter: ");
+            unitChoice  =  getUnitChoice();
+
+            switch (unitChoice) {
+                case "C":
+                    convertTo = getConvertToUnit();
+                    temperature = getTemp(convertTo);
+                    switch (convertTo) {
+                        case "F":
+                            System.out.println("Result " + temperature + "°C is "  + convertC2F(temperature) + "°F");
+                            break;
+                        case "K":
+                            System.out.println("Result " + temperature + "°C is " + convertC2K(temperature) + "°K");
+                            break;
+                    }
+                    break;
+
+                case "F":
+                    convertTo = getConvertToUnit();
+                    temperature = getTemp(convertTo);
+
+                    switch (convertTo) {
+                        case "C":
+                            System.out.println("Result " + temperature + "°F is " + convertF2C(temperature) + "°C");
+                            break;
+                        case "K":
+                            System.out.println("Result " + temperature + "°F is " +convertF2K(temperature) + "°K");
+                            break;
+                    }
+//                    if (convertTo.equals("C")) {
+//                        System.out.println("Result " + temperature + "°F is " + convertF2C(temperature) + "°C");
+//                    } else if (convertTo.equals("K")) {
+//                        System.out.println("Result " + temperature + "°F is " +convertF2K(temperature) + "°K");
+//                    }
+                    break;
+
+                case "K":
+                    convertTo = getConvertToUnit();
+                    temperature = getTemp(convertTo);
+
+                    switch (convertTo) {
+                        case "C":
+                            System.out.println("Result " + temperature + "°K is " + convertK2C(temperature) + "°C");
+                            break;
+                        case "F":
+                            System.out.println("Result " + temperature + "°K is " + convertK2F(temperature) + "°F");
+                    }
+//                    if (convertTo.equals("C")) {
+//                        System.out.println("Result " + temperature + "°K is " + convertK2C(temperature) + "°C");
+//                    } else if (convertTo.equals("F")) {
+//                        System.out.println("Result " + temperature + "°K is " + convertK2F(temperature) + "°F");
+//                    }
+                    break;
+
+                case "Q":
+                    shouldRun = false;
+                    break;
+            }
             }
 
-        }
+
     }
 }

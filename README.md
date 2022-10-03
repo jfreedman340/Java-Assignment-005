@@ -9,14 +9,14 @@ As a new Java developer, you will be required to familiarize yourself with exist
     * What is the access modifier?
 
 * It has a public access modifier, which means it can be called outside of the TempConversion class.
- 
+
     * Is it a class or object method, how do you know?
 
-* It is a class method since it is a static method, it can only be used with the TempConversion class.
+* It is an object method since it is a static method.
 
     * What is its return type?
 
-* Double
+* double
 
   * What parameters does it require, and what are the parameter(s) datatype(s)?
 
@@ -24,7 +24,7 @@ As a new Java developer, you will be required to familiarize yourself with exist
 
   * Describe for me how the body of the method executes (i.e. its flow of execution).
 
-* It calls the methods convertC2K, convertF2C, and converts fahrenheit into celcius and celcius to kelvin.
+* It first executes the method convertF2C, then the result goes into convertC2K as a parameter, and the kelvin value will be returned.
 
 * Using Java terminology, break down method **getUnitChoice**.
     * What is the access modifier?
@@ -33,7 +33,7 @@ As a new Java developer, you will be required to familiarize yourself with exist
 
   * Is it a class or object method, how do you know?
 
-* It is a class method because it's static.
+* It is an object method because it's static.
 
   * What is its return type?
 
@@ -45,7 +45,7 @@ As a new Java developer, you will be required to familiarize yourself with exist
 
   * Describe for me how the body of the method executes (i.e. its flow of execution).
 * 
-* First it outputs three lines of strings, then it returns what the user input.
+* First it outputs four lines of strings, then it returns what the user input.
 * 
   * How do the format specifiers differ than what you've seen before and what do they do?
 
