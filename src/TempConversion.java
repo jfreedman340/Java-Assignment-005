@@ -23,6 +23,10 @@ public class TempConversion {
         return kelvin - 273.15;
     }
 
+    public static double convertK2F(double kelvin) {
+        return convertK2C(kelvin) * (9.0/5.0 + 32.0);
+    }
+
     public static double getTemp(String unit) {
         System.out.printf("%-40s : ", String.format("Please enter °%s temperature to convert", unit));
         return Double.parseDouble(input.nextLine());
@@ -37,7 +41,9 @@ public class TempConversion {
     }
 
     public static void main(String[] args) {
+        TempConversion tempConversion = new TempConversion();
         while(true) {
+            }
 
         }
     }

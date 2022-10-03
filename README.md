@@ -7,17 +7,49 @@ As a new Java developer, you will be required to familiarize yourself with exist
     * Variables
 * Using Java terminology, break down every piece of the method **convertF2K**.
     * What is the access modifier?
+
+* It has a public access modifier, which means it can be called outside of the TempConversion class.
+ 
     * Is it a class or object method, how do you know?
+
+* It is a class method since it is a static method, it can only be used with the TempConversion class.
+
     * What is its return type?
-    * What parameters does it require, and what are the parameter(s) datatype(s)?
-    * Describe for me how the body of the method executes (i.e. its flow of execution).
+
+* Double
+
+  * What parameters does it require, and what are the parameter(s) datatype(s)?
+
+* It requires the user to input the number for fahrenheit as a double. Such as 90.0
+
+  * Describe for me how the body of the method executes (i.e. its flow of execution).
+
+* It calls the methods convertC2K, convertF2C, and converts fahrenheit into celcius and celcius to kelvin.
+
 * Using Java terminology, break down method **getUnitChoice**.
     * What is the access modifier?
-    * Is it a class or object method, how do you know?
-    * What is its return type?
-    * What parameters does it require, and what are the parameter(s) datatype(s)?
-    * Describe for me how the body of the method executes (i.e. its flow of execution).
-    * How do the format specifiers differ than what you've seen before and what do they do?
+
+* It's public.
+
+  * Is it a class or object method, how do you know?
+
+* It is a class method because it's static.
+
+  * What is its return type?
+
+* It has a string as the return type.
+
+  * What parameters does it require, and what are the parameter(s) datatype(s)?
+
+* It doesn't take any parameters.
+
+  * Describe for me how the body of the method executes (i.e. its flow of execution).
+* 
+* First it outputs three lines of strings, then it returns what the user input.
+* 
+  * How do the format specifiers differ than what you've seen before and what do they do?
+
+* I have not seen the %-40s before, and when I looked it up I found out that it specifies how long the characters will be and the - means it is left justified.
 
 ## Part 2: - Implement Missing Method: convertK2F
 This Part is aimed at teaching you to use methods and code you have to add new functionality to existing code. In this case you will add the missing conversion method, but you don't need to know math :-)
